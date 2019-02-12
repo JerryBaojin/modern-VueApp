@@ -1,0 +1,172 @@
+@font-face{
+  font-family: 'Gobold-Regular';
+  src: url('../fonts/GoboldRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'MFLiHei_Noncommercial-Regular';
+  src: url('../fonts/MFLiHei_Noncommercial-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* docy,div,input,select,textarea{
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+} */
+/* -webkit-user-select:none导致input/textarea输入框无法输入 */
+*:not(input,textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+html,body,div,p,ul,li{margin:0; padding:0;font-family: 'pingFangSC-Medium';}
+a{text-decoration: none;}
+div{font-size: .24rem;color: #333333;}
+/*解决滑动生硬手指离开后不动问题*/
+html,body{ height:100%;width: 100%; margin:0 auto;-webkit-overflow-scrolling: touch;-webkit-tap-highlight-color: rgba(26,26,26,0);}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.moreDot{text-overflow: ellipsis;word-wrap: normal;white-space: nowrap;overflow: hidden;text-align: left;}
+.clearfix{zoom:1}
+.hidden{overflow: hidden;}
+.left{float: left;}
+.right{float: right;}
+.relative{position: relative;}
+.absolute{position: absolute;}
+.fixed{position: fixed;}
+.center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.flex{display: flex;align-items: center;justify-content: center;}
+.flex-between{display: flex;justify-content: space-between;align-items: center;}
+.popup{ -webkit-transition:all 2s;transition:all 2s;z-index: 997;}
+.popup .bg{background:rgba(0, 0, 0, 0.5);width:100%;height:100%;}
+.z-fixed{position:fixed;bottom:0;left:0;width:100%;height: 100%;}
+.box-shadow{
+	  box-shadow: 0 8px 20px rgba(255, 64, 93, 0.38);
+}
+.box-shadow,.btn_gradient{
+    background: -o-linear-gradient(right, #ff405d, #ff228f);
+    background: -moz-linear-gradient(right, #ff405d, #ff228f); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ff405d , #ff228f);
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff228f,endColorStr=#ff405d);
+}
+.backTop{
+  background: url('../img/back_top.png');
+  background-size: 100%;
+  width: 1.04rem;
+  height: 1.04rem;
+  position: fixed;
+  bottom: 1.2rem;
+  right: .3rem;
+  z-index: 10000;
+}
+/*下拉加载的公共样式*/
+.mint-loadmore-top, .mint-loadmore-bottom{font-size: .22rem;}
+.loading-gif{width: .32rem;height: .32rem;}
+.mint-loadmore{overflow: auto!important;}
+.page-infinite-loading {text-align: center;padding: .3rem 0;margin: 0 auto;}
+#app{width: 7.5rem;margin:0 auto;min-height: 100%;}
+/*缺省*/
+.default-text{
+  /* padding-top: .5rem; */
+  color: #999999;font-size: 14px;
+}
+.no-data{width: 4rem!important;height: 3.26rem!important;padding-top:1rem;padding-bottom: .55rem;}
+/*公共背景色*/
+.backf4{
+  background-color: #f5f5f5;
+}
+/*个人中心标题*/
+.pageTitle{
+	font-size: .48rem;
+	padding: .2rem .3rem;
+	background: #fff;
+}
+.wa-block-link{
+	display: block;
+	color: #fff;
+}
+.fixed_btn,.my-btn{
+    display: block;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 999;
+    height: 1rem;
+    line-height: 1rem;
+    background: #000000;
+    color: #F7D366;
+    font-size: .3rem;
+    text-align: center;
+}
+/*按住灰色暂时去掉*/
+/* .common_btn:hover{
+  background-color:rgba(0,0,0,.1);
+  color: #000;
+} */
+.mint-spinner-fading-circle{
+	margin: 0 auto;
+}
+.header-right{
+  margin-right: .34rem;
+  padding-top: .3rem;
+  font-size:.32rem;
+  color: #808080;
+  display: flex;
+  justify-content: flex-end;
+}
+/*底部选择*/
+.status_pupop{
+  width: 7.14rem;
+  background: #fff;
+  border-radius: .2rem;
+  margin-bottom: .14rem;
+}
+.status_pupop>div{
+  color: #010101;
+  font-size: .36rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: .01rem solid rgba(229,229,229,1);
+}
+.status_pupop>div:nth-last-child(){
+  border-bottom: none;
+}
+.status_cancel{
+  color: #6D60F6;
+  font-size: .36rem;
+  width:7.14rem;
+  height:1rem;
+  line-height:1rem;
+  background:rgba(255,255,255,1);
+  border-radius:.2rem;
+  margin-bottom: .23rem;
+}
+/*公共弹框样式*/
+ .mint-toast{
+    padding: .2rem .35rem!important;
+    border-radius: .15rem;
+ }
+ .mint-toast.is-placebottom{
+   bottom: 1.3rem!important;
+ }
+ .mint-toast span{
+   font-size: .3rem;
+ }
+
+ .aplayer{
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /*银屏播放去掉点击时背景色*/
+ }
+ [v-cloak] {
+  display: none;
+}
